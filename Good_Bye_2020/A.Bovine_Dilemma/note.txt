@@ -1,0 +1,8 @@
+
+x
+_xx_xx
+
+x
+_x_x_x
+
+-> calculate distinct differences

@@ -1,0 +1,20 @@
+build list of edges, sorted from high w > low w
+4
+3 5 4 6
+2 1
+3 1
+4 3
+2
+
+4
+10 6 6 6
+1 2
+2 3
+4 1
+
+3 6
+2 6
+1 10
+4 6
+
+e[] = 34 12 13

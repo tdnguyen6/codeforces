@@ -1,0 +1,8 @@
+2 next to each other:
+- same:
+    count 2
+- inc:
+    count 2
+
+from 3 next to each other that is same:
+still count 2
