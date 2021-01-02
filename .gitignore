@@ -14,3 +14,6 @@
 **/node_modules
 **/.idea
 **/.vscode
+
+**/test_cases.txt
+**/test_output.txt
