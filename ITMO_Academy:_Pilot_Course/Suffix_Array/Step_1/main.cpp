@@ -40,8 +40,7 @@ typedef unsigned long int uint32;
 typedef long long int int64;
 typedef unsigned long long int uint64;
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
@@ -58,51 +57,34 @@ int main()
     {
         // k = 0
         pair<int, int> a[l];
-        REP(i, l)
-        {
+        REP(i, l) {
             a[i] = {s[i], i};
         }
         sort(a, a + l);
 
-        // order
-        REP(i, l)
-        {
-            od[i] = a[i].second;
-        }
-
         // equipvalent classes
+        od[0] = a[0].second;
         ec[od[0]] = 0;
-        FOR(i, 1, l, 1)
-        {
+        FOR(i, 1, l, 1) {
+            od[i] = a[i].second;
             ec[od[i]] = ec[od[i - 1]] + (a[i].first > a[i - 1].first);
         }
     }
 
     pair<pair<int, int>, int> a[l];
-    for (int k = 0; (1 << k) < l; k++)
-    {
-        REP(i, l)
-        {
+    for (int k = 0; (1 << k) < l; k++) {
+        REP(i, l) {
             a[i] = {{ec[i], ec[(i + (1 << k)) % l]}, i};
         }
         sort(a, a + l);
 
-        // order
-        REP(i, l)
-        {
+        FOR(i, 1, l, 1) {
             od[i] = a[i].second;
-        }
-
-        // equipvalent classes
-        ec[od[0]] = 0;
-        FOR(i, 1, l, 1)
-        {
             ec[od[i]] = ec[od[i - 1]] + (a[i].first > a[i - 1].first);
         }
     }
 
-    REP(i, l)
-    {
+    REP(i, l) {
         cout << od[i] << endl;
     }
     cout << '\n';
