@@ -1,0 +1,3 @@
+for each c:
+    if no block cell 
+        can be fill by a v or h tile

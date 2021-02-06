@@ -1,0 +1,4 @@
+j can be place be4 i if lower/narrower 
+hj<hi and wj<wi (both friends are standing or both are lying);
+wj<hi and hj<wi (one of the friends is standing and the other is lying)
+
